@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  
+  @Input() valuesFromHome: any;
   model: any = {};
 
   constructor() { }
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   cancel() {
-    console.log("Anulowane");
+    console.log('Anulowane');
   }
 
 }

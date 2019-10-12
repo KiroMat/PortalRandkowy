@@ -21,6 +21,7 @@ namespace PortalRandkowy.API.Controllers {
         }
         // GET api/values
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetValues () {
             return Ok(await _context.Values.ToListAsync());
         }
